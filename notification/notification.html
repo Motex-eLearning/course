@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mailContent</title>
+    <link rel="stylesheet" href="css/mail.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div><img src="https://img.onl/3Au6QD" width="960" class="banner"></div>
+    <div class="content">
+        <ul class="language">
+            <li id="twBtn"><a href="#">中文</a></li>
+            <li id="enBtn"><a href="#">Eng</a></li>
+
+        </ul>
+        <div id="zh-tw">
+            <p>親愛的長官/同仁：</p>
+            <div>
+                <p>很高興通知您，您已經被新增入我們的Moodle課程：(課程名稱)</p>
+                <p>請先登入我們的平台
+                    <a title="點擊進入平台" href="https://makemask101.moodlecloud.com/" target="_blank" class="linkToMoodle"
+                        rel="noopener noreferrer">https://makemask101.moodlecloud.com/</a>
+                </p>
+            </div>
+            <p class="mb-3">您可以透過以下課程代碼搜尋課程</p>
+            <div class="courseBtn">課程代碼：3.6.0.02</div>
+            <p class="mt-3">或者到您的儀表板上，找到相關課程入口。</p>
+            <p class="mb-3">感謝您撥冗看完，若有任何問題歡迎隨時與我聯繫。</p>
+            <p class="mt-3">祝您 觀課愉快。</p>
+        </div>
+        <div id="en" class="hide">
+            <p>Dear Colleagues:</p>
+            <div>
+                <p>I'm glad to inform you that you have just been enrolled into our Moodle course (XXX)</p>
+                <p>Please log into the platform here:
+                    <a title="click into the platform" href="https://makemask101.moodlecloud.com/" target="_blank"
+                        rel="noopener noreferrer">https://makemask101.moodlecloud.com/</a>
+                </p>
+            </div>
+            <p class="mb-3">You can search for the course using the following code</p>
+            <div class="courseBtn">code：3.6.0.02</div>
+            <p class="mt-3">Alternatively, you can click on "Dashboard" and access the course from there as well.
+            </p>
+            <p class="mb-3">Please do not hesitate to reach out if I can be of any futher assistance.</p>
+            <p class="mt-3">Thank you for your time. </p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#twBtn").click(function (e) {
+                e.preventDefault();
+                $("#zh-tw").show();
+                $("#en").hide();
+            })
+            $("#enBtn").click(function (e) {
+                e.preventDefault();
+                $("#zh-tw").hide();
+                $("#en").show();
+            })
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+body {
+  color: #3d4858;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  list-style: none;
+}
+
+.content {
+  margin-left: 20px;
+}
+
+.language {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-after: 2em;
+          margin-block-end: 2em;
+}
+
+.language li {
+  background-color: rgba(61, 72, 88, 0.2);
+  display: inline;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.language li:hover {
+  background-color: rgba(61, 72, 88, 0.8);
+  color: #eee;
+}
+
+.courseBtn {
+  background-color: #ed7e1e;
+  color: #eee;
+  padding: 12px;
+  display: inline-block;
+}
+
+.linkToMoodle {
+  color: #2474dd;
+}
+
+.linkToMoodle:hover {
+  font-weight: 700;
+  color: #ed7e1e;
+  background-color: rgba(61, 72, 88, 0.2);
+}
+
+.mb-3 {
+  margin-bottom: 3px;
+}
+
+.mt-3 {
+  margin-top: 3px;
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=mail.css.map */
