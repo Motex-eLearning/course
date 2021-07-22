@@ -15,7 +15,7 @@
     <div><img src="https://img.onl/3Au6QD" width="960" class="banner"></div>
     <div class="content">
         <ul class="language">
-            <li id="twBtn"><a href="#" title="以中文閱讀">中文</a></li>
+            <li id="twBtn" class="active"><a href="#" title="以中文閱讀">中文</a></li>
             <li id="enBtn"><a href="#" title="Read in English">Eng</a></li>
 
         </ul>
@@ -58,12 +58,16 @@
                 e.preventDefault();
                 $("#zh-tw").show();
                 $("#en").hide();
-            })
+                $("#twBtn").addClass("active");
+                $("#enBtn").removeClass("active");
+            });
             $("#enBtn").click(function (e) {
                 e.preventDefault();
                 $("#zh-tw").hide();
                 $("#en").show();
-            })
+                $("#twBtn").removeClass("active");
+                $("#enBtn").addClass("active");
+            });
         });
     </script>
 
