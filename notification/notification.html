@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mailContent</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/mail.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -22,14 +23,16 @@
         <div id="zh-tw">
             <p>親愛的長官/同仁：</p>
             <div>
-                <p>很高興通知您，您已經被新增入我們的Moodle課程：(課程名稱)</p>
+                <p>很高興通知您，您已經被新增入我們的Moodle課程：<span class="title">(課程名稱)</span></p>
                 <p>請先登入我們的平台 ➙
                     <a title="點擊進入平台" href="https://makemask101.moodlecloud.com/" target="_blank" class="linkToMoodle"
                         rel="noopener noreferrer">https://makemask101.moodlecloud.com/</a>
                 </p>
             </div>
             <p class="mb-3">您可以透過以下課程代碼搜尋課程</p>
-            <div class="courseBtn">課程代碼：3.6.0.02</div>
+            <div class="courseBtn" title="點擊複製課程代碼">課程代碼：<span id="textTw">3.6.0.03</span><span
+                    class="material-icons font-sm ml-6">content_copy</span></div>
+
             <p class="mt-3">或者到您的儀表板上，找到相關課程入口。</p>
             <p class="mb-3">感謝您撥冗看完，若有任何問題歡迎隨時與我聯繫。</p>
             <p class="mt-3">祝您 觀課愉快。</p>
@@ -37,14 +40,16 @@
         <div id="en" class="hide">
             <p>Dear Colleagues,</p>
             <div>
-                <p>I'm glad to inform you that you have just been enrolled into our Moodle course (XXX)</p>
+                <p>I'm glad to inform you that you have just been enrolled into our Moodle course <span
+                        class="title">(XXX)</span></p>
                 <p>Please log into the platform here ➙
-                    <a title="click into the platform" href="https://makemask101.moodlecloud.com/" target="_blank" class="linkToMoodle"
-                        rel="noopener noreferrer">https://makemask101.moodlecloud.com/</a>
+                    <a title="click into the platform" href="https://makemask101.moodlecloud.com/" target="_blank"
+                        class="linkToMoodle" rel="noopener noreferrer">https://makemask101.moodlecloud.com/</a>
                 </p>
             </div>
             <p class="mb-3">You can search for the course using the following code</p>
-            <div class="courseBtn">code：3.6.0.02</div>
+            <div class="courseBtn" title="click to copy code">code：<span id="textEn">3.6.0.02</span><span
+                    class="material-icons font-sm ml-6">content_copy</span></div>
             <p class="mt-3">Alternatively, you can click on "Dashboard" and access the course from there as well.
             </p>
             <p class="mb-3">Please do not hesitate to reach out if I can be of any futher assistance.</p>
@@ -52,11 +57,12 @@
         </div>
     </div>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         $(document).ready(function () {
             $("#twBtn").click(function (e) {
                 e.preventDefault();
-                $("#zh-tw").show();
+                $("#zh-tw").fadeIn();
                 $("#en").hide();
                 $("#twBtn").addClass("active");
                 $("#enBtn").removeClass("active");
@@ -64,11 +70,50 @@
             $("#enBtn").click(function (e) {
                 e.preventDefault();
                 $("#zh-tw").hide();
-                $("#en").show();
+                $("#en").fadeIn();
                 $("#twBtn").removeClass("active");
                 $("#enBtn").addClass("active");
             });
+            //複製按鈕
+            $(".content").on("click", ".courseBtn", function () {
+                // 建立 Range 物件
+                const range = document.createRange();
+                // 將指定元素內容加到 Range 中
+                let texts = "";
+                if ($(this).parent()[0].id === "zh-tw") {
+                    texts = document.getElementById('textTw');
+                } else if ($(this).parent()[0].id === "en") {
+                    texts = document.getElementById('textEn');
+                }
+                // console.log($(this).parent()[0].id);
+                range.selectNode(texts);
+                // 取得 Selection 物件
+                const selection = window.getSelection();
+                // 先清空當前選取範圍
+                selection.removeAllRanges();
+                // 加入 Range 
+                selection.addRange(range);
+
+                document.execCommand('copy');
+                selection.removeAllRanges();
+
+                if ($(this).parent()[0].id === "zh-tw") {
+                    Swal.fire(
+                        'Good job!',
+                        "您已成功複製課程代碼",
+                        'success'
+                    )
+                } else if ($(this).parent()[0].id === "en") {
+                    Swal.fire(
+                        'Good job!',
+                        "You have successfully copied the course code",
+                        'success'
+                    )
+                }
+
+            });
         });
+
     </script>
 
 </body>

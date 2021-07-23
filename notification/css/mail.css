@@ -16,6 +16,11 @@ ul {
   margin-left: 20px;
 }
 
+.title {
+  color: #2474dd;
+  font-weight: 700;
+}
+
 .language {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
@@ -39,8 +44,13 @@ ul {
 .courseBtn {
   background-color: #ed7e1e;
   color: #eee;
-  padding: 12px;
+  padding: 6px;
   display: inline-block;
+  cursor: pointer;
+}
+
+.courseBtn:hover {
+  background-color: #c86510;
 }
 
 .linkToMoodle {
@@ -48,7 +58,6 @@ ul {
 }
 
 .linkToMoodle:hover {
-  font-weight: 700;
   color: #ed7e1e;
   background-color: rgba(61, 72, 88, 0.2);
 }
@@ -61,7 +70,24 @@ ul {
   margin-top: 3px;
 }
 
+.ml-6 {
+  margin-left: 6px;
+}
+
+.font-sm {
+  font-size: 16px;
+}
+
 .hide {
   display: none;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #3d4858 !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(61, 72, 88, 0.3);
+          box-shadow: 0 0 0 3px rgba(61, 72, 88, 0.3);
 }
 /*# sourceMappingURL=mail.css.map */
