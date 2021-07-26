@@ -57,6 +57,10 @@ ul {
   color: #eee;
 }
 
+.border-dashed {
+  border: 1px dashed rgba(61, 72, 88, 0.6);
+}
+
 .courseBtn {
   background-color: #ed7e1e;
   color: #eee;
