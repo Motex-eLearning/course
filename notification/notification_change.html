@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mailContent_change</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="stylesheet" href="css/mail.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -25,7 +27,7 @@
                 <p class="mb-3">親愛的長官/同仁：</p>
                 <div class="mb-3">
                     <p class="mb-1">很高興通知您，您註冊的Moodle課程：<span class="title">(課程名稱)</span>，內容已經有更動，變動內容如下：</p>
-                    <ul class="mb-1 py-2 border-dashed">
+                    <ul class="mb-1 py-2 border-dashed changeContent">
                         <li><span class="badge rounded-pill bg-secondary">Add</span>變動1</li>
                         <li><span class="badge rounded-pill bg-danger">Remove</span>變動1</li>
                     </ul>
@@ -38,15 +40,19 @@
                 <div class="courseBtn" title="點擊複製課程代碼">課程代碼：<span id="textTw">3.6.0.03</span><span
                         class="material-icons font-sm ms-2">content_copy</span></div>
 
-                <p class="mt-1 mb-3">或者到您的儀表板上，找到相關課程入口。</p>
+                <p class="mt-1">或者到您的儀表板上，找到相關課程入口。</p>
+                <p class="mt-1 mb-3" style="font-size: 12pt">(關於本通知信的使用方法，您可點擊右側的按鈕觀看教學，<a
+                        href="img/notificationSteps.gif" data-lightbox="image-1" data-title="通知信件使用方法"
+                        class="btn btn-secondary" style="font-size: 10pt" title="點擊觀看">教學</a>)</p>
                 <p>感謝您撥冗看完本郵件，若有任何問題歡迎隨時與我聯繫。</p>
                 <p class="mb-3">祝您 觀課愉快。</p>
             </div>
             <div id="en" class="hide">
                 <p class="mb-3">Dear Colleagues,</p>
                 <div class="mb-3">
-                    <p class="mb-1">I'm glad to inform you that the course <span class="title">(XXX)</span> you have enrolled in has changed, as following:</p>
-                    <ul class="mb-1 py-2 border-dashed">
+                    <p class="mb-1">I'm glad to inform you that the course <span class="title">(XXX)</span> you have
+                        enrolled in has changed, as following:</p>
+                    <ul class="mb-1 py-2 border-dashed changeContent">
                         <li><span class="badge rounded-pill bg-secondary">Add</span>變動1</li>
                     </ul>
                     <p>Please log into the platform to check ➙
@@ -57,8 +63,12 @@
                 <p class="mb-1">You can search for the course using the following code</p>
                 <div class="courseBtn" title="click to copy code">code：<span id="textEn">3.6.0.01</span><span
                         class="material-icons font-sm ms-2">content_copy</span></div>
-                <p class="mt-1 mb-3">Alternatively, you can click on "Dashboard" and access the course from there as well.
+                <p class="mt-1">Alternatively, you can click on "Dashboard" and access the course from there as
+                    well.
                 </p>
+                <p class="mt-1 mb-3" style="font-size: 12pt">(Regarding this email, you can click the button on the
+                    right for tutorial，<a href="img/notificationSteps.gif" data-lightbox="image-2" data-title="Mail tutorial"
+                        class="btn btn-secondary" style="font-size: 10pt" title="click to watch tutorial">TUT</a>)</p>
                 <p>Please do not hesitate to reach out if I can be of any futher assistance.</p>
                 <p class="mb-3">Thank you for your time. </p>
             </div>
@@ -68,7 +78,7 @@
         </footer>
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         $(document).ready(function () {

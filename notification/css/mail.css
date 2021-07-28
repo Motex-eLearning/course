@@ -58,6 +58,17 @@ ul {
   color: #eee;
 }
 
+.changeContent li {
+  width: 70%;
+  padding-left: 3px;
+  padding-top: 3px;
+  padding-bottom: 6px;
+}
+
+.changeContent li:hover {
+  background-color: rgba(61, 72, 88, 0.2);
+}
+
 .border-dashed {
   border: 1px dashed rgba(61, 72, 88, 0.6);
 }
@@ -105,5 +116,9 @@ footer {
 .swal2-styled.swal2-confirm:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(61, 72, 88, 0.3) !important;
           box-shadow: 0 0 0 3px rgba(61, 72, 88, 0.3) !important;
+}
+
+.btn {
+  padding: 1px 3px;
 }
 /*# sourceMappingURL=mail.css.map */
