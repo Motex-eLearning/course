@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTEX Moodle平台課程通知</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="css/mail.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div><img src="img/banner_change.png" class="banner mb-3"></div>
+        <div class="content">
+            <ul class="language">
+                <li id="twBtn" class="active"><a href="#" title="以中文閱讀">中文</a></li>
+                <li id="enBtn"><a href="#" title="Read in English">Eng</a></li>
+            </ul>
+            <div id="zh-tw">
+                <p class="mb-3">親愛的長官/同仁：</p>
+                <div class="mb-3">
+                    <p class="mb-1">很高興通知您，您註冊的Moodle課程：<span class="title">MKEnX CU Meeting</span>，內容已經有更動，變動內容如下：</p>
+                    <ul class="mb-1 py-2 border-dashed changeContent">
+                        <li><span class="badge rounded-pill bg-secondary me-2">Add</span>業務部週報20210726</li>
+                        <!-- <li><span class="badge rounded-pill bg-danger">Remove</span>變動1</li> -->
+                    </ul>
+                    <p>請登入我們的平台以觀看變動內容 ➙
+                        <a title="點擊進入平台" href="https://makemask101.moodlecloud.com/" target="_blank"
+                            class="linkToMoodle" rel="noopener noreferrer">https://makemask101.moodlecloud.com/</a>
+                    </p>
+                </div>
+                <p class="mb-1">您可以透過以下課程代碼搜尋課程</p>
+                <div class="courseBtn" title="點擊複製課程代碼">課程代碼：<span id="textTw">3.6.0.03</span><span
+                        class="material-icons font-sm ms-2">content_copy</span></div>
+
+                <p class="mt-1">或者到您的儀表板上，找到相關課程入口。</p>
+                <p class="mt-1 mb-3" style="font-size: 12pt">(關於本通知信的使用方法，您可點擊右側的按鈕觀看教學，<a
+                        href="img/notificationSteps.gif" data-lightbox="image-1" data-title="通知信件使用方法"
+                        class="btn btn-secondary" style="font-size: 10pt" title="點擊觀看">教學</a>)</p>
+                <p>感謝您撥冗看完本郵件，若有任何問題歡迎隨時與我聯繫。</p>
+                <p class="mb-3">祝您 觀課愉快。</p>
+            </div>
+            <div id="en" class="hide">
+                <p class="mb-3">Dear Colleagues,</p>
+                <div class="mb-3">
+                    <p class="mb-1">I'm glad to inform you that the course <span class="title">(MKEnX CU Meeting)</span> you
+                        have enrolled in has changed, as following:</p>
+                    <ul class="mb-1 py-2 border-dashed changeContent">
+                        <li><span class="badge rounded-pill bg-secondary me-2">Add</span>業務部週報20210726</li>
+                    </ul>
+                    <p>Please log into the platform to check ➙
+                        <a title="click into the platform" href="https://makemask101.moodlecloud.com/" target="_blank"
+                            class="linkToMoodle" rel="noopener noreferrer">https://makemask101.moodlecloud.com/</a>
+                    </p>
+                </div>
+                <p class="mb-1">You can search for the course using the following code</p>
+                <div class="courseBtn" title="click to copy code">code：<span id="textEn">3.6.0.03</span><span
+                        class="material-icons font-sm ms-2">content_copy</span></div>
+                <p class="mt-1">Alternatively, you can click on "Dashboard" and access the course from there as
+                    well.
+                </p>
+                <p class="mt-1 mb-3" style="font-size: 12pt">(Regarding this email, you can click the button on the
+                    right for tutorial，<a href="img/notificationSteps.gif" data-lightbox="image-2" data-title="Mail tutorial"
+                        class="btn btn-secondary" style="font-size: 10pt" title="click to watch tutorial">TUT</a>)</p>
+                <p>Please do not hesitate to reach out if I can be of any futher assistance.</p>
+                <p class="mb-3">Thank you for your time. </p>
+            </div>
+        </div>
+        <p>--</p>
+        <p>Yours Sincerely</p>
+        <div style="display: flex; align-items: center;" class="mb-3">
+            <div><img src="img/logo.png" alt="logo" width="200" height="56.83" />
+                <p style="font-weight: bold; text-align: center; color: #797e83; margin: 8px 0;">華新醫材股份有限公司 <br />Motex
+                    Healthcare Corp.</p>
+            </div>
+            <div style="margin-left: 20px; color: #54585c; border-left: 2px solid #eee; padding-left: 12px;">
+                <p style="margin-bottom: 6px; font-size: 12px;"><strong>企業大學部</strong> <span
+                        style="color: #999999;">(數位訓練X教材開發)</span></p>
+                <h5
+                    style="color: #003a8f; margin-left: 20px; letter-spacing: 20px; font-size: 16px; margin-top: 6px; margin-bottom: 5px;">
+                    林修平</h5>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><a style="text-decoration: none; color: #54585c;" href="tel:+886-424751111">Tel: 04-2475-1111
+                            #3023</a></li>
+                    <li><a style="text-decoration: none; color: #54585c;" href="tel:+886-919035176">Mobile:
+                            0919-035176</a></li>
+                    <li style="margin-bottom: 3px;">E-mail: hp_lin@motex.com</li>
+                    <li style="margin-bottom: 3px;">台中市南屯區文心路一段218號13F-2</li>
+                    <li style="margin-bottom: 3px;">統編：12564904</li>
+                </ul>
+            </div>
+            <div style="margin-left: 20px; padding-left: 12px;">
+                <div style="display: flex;">
+                    <a href="https://linktr.ee/shoppingq" target="_blank" title="點擊進入我的linktree"><img
+                            style="margin-right: 40px;" src="img/linktree.png" width="160px" /></a>
+                    <a href="https://makemask101.moodlecloud.com/" target="_blank" rel="noopener noreferrer"
+                        title="點擊進入Moodle平台"><img src="img/moodle.png" width="160px" /></a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright© MOTEX 2021</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function () {
+            $("#twBtn").click(function (e) {
+                e.preventDefault();
+                $("#zh-tw").fadeIn();
+                $("#en").hide();
+                $("#twBtn").addClass("active");
+                $("#enBtn").removeClass("active");
+            });
+            $("#enBtn").click(function (e) {
+                e.preventDefault();
+                $("#zh-tw").hide();
+                $("#en").fadeIn();
+                $("#twBtn").removeClass("active");
+                $("#enBtn").addClass("active");
+            });
+            //複製按鈕
+            $(".content").on("click", ".courseBtn", function () {
+                // 建立 Range 物件
+                const range = document.createRange();
+                // 將指定元素內容加到 Range 中
+                let texts = "";
+                if ($(this).parent()[0].id === "zh-tw") {
+                    texts = document.getElementById('textTw');
+                } else if ($(this).parent()[0].id === "en") {
+                    texts = document.getElementById('textEn');
+                }
+                // console.log($(this).parent()[0].id);
+                range.selectNode(texts);
+                // 取得 Selection 物件
+                const selection = window.getSelection();
+                // 先清空當前選取範圍
+                selection.removeAllRanges();
+                // 加入 Range 
+                selection.addRange(range);
+
+                document.execCommand('copy');
+                selection.removeAllRanges();
+
+                if ($(this).parent()[0].id === "zh-tw") {
+                    Swal.fire(
+                        'Good job!',
+                        `您已成功複製課程代碼 "${range}"`,
+                        'success'
+                    )
+                } else if ($(this).parent()[0].id === "en") {
+                    Swal.fire(
+                        'Good job!',
+                        `You've successfully copied the code "${range}"`,
+                        'success'
+                    )
+                }
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
