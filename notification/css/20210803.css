@@ -1,0 +1,26 @@
+.board01 {
+    background-color: #4A6D65;
+    color: #eee;
+    padding: 6px;
+    display: inline-block;
+}
+
+.board02 {
+    background-color: #363635;
+    color: #eee;
+    padding: 6px;
+    display: inline-block;
+}
+
+.links {
+    display: flex;
+}
+
+.box{
+    border: 1px dashed #6e6e6e;
+    padding: 16px;
+}
+
+.color-red {
+    color: red;
+}
