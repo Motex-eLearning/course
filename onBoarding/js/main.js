@@ -10,7 +10,7 @@ function render(arr) {
     let slideStr = "";
     arr.forEach(item => {
         paginationStr += `<div class="timeline-nav__item">${item.year}</div>`;
-        slideStr += `<div class="timeline-slide" style="background-image: url(https://unsplash.it/1920/600?image=11" data-year="${item.year}">      <span class="timeline-year">${item.year}</span>
+        slideStr += `<div class="timeline-slide" style="background-image: url(${item.img})" data-year="${item.year}">      <span class="timeline-year">${item.year}</span>
     <div class="timeline-slide__content">
       <h4 class="timeline-title">${item.event}</h4>
       <p class="timeline-text">${item.text}</p>
